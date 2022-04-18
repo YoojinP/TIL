@@ -1,0 +1,25 @@
+numpy 와 tolist()
+
+<case.1>
+
+import numpy as np
+
+a = np.array([1,2,3])
+b= np.array([2,2,2])
+sum = a*b #[2,4,6]
+sum = np.sum(sum)  # sum의 type = np.int64, sum =12
+
+# 이 경우 sum은 0-dim array
+
+sum = sum.tolist()  # sum의 type = int, sum을 1-dim array로 반환
+
+
+<case.2>
+
+a = np.array([1,2,3], dtype= np.uint32)
+a = list(a)
+type(a[0])  # np.uint32, list()를 쓴 경우 안의 요소들까지 변환 x 
+
+a= a.tolist()
+type(a[0])  # int, tolist()로 안의 요소들까지 같이 타입 변환
+
