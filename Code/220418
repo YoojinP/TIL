@@ -1,4 +1,7 @@
-numpy 와 tolist()
+numpy 와 tolist()와 list()
+
+tolist()와 list()의 차이점
+: tolist()는 1d-array의 경우, numpy 스칼라를 Python 스칼라로 변경 해준다
 
 <case.1>
 
